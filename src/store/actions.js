@@ -38,7 +38,7 @@ export const purchaseBurgerStart = () => {
 export const purchaseBurger = (orderData, thisPropsHistory) => {
     return (dispatch) => {
         dispatch(purchaseBurgerStart());
-        axios.post("https://myburger-b6fec-default-rtdb.firebaseio.com/orders.json", orderData)
+        axios.post("", orderData)
             .then((result) => {
                 dispatch(purchaseBurgerSuccess(result.data, orderData));
                 thisPropsHistory.replace("/");
